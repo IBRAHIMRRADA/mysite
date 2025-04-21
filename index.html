@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Task</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to My Site</h1>
+        </header>
+        
+        <main>
+            <section class="student-info">
+                <h2>Student Information</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Name</td>
+                            <td>Ibrahim Rada Mohamed Ibrahim</td>
+                        </tr>
+                        <tr>
+                            <td>Group</td>
+                            <td>A</td>
+                        </tr>
+                        <tr>
+                            <td>ID</td>
+                            <td>20230207</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <section class="color-changer">
+                <h3>Change Background Color</h3>
+                <div class="button-group">
+                    <button class="color-btn" data-color="#f5f5f5">Light</button>
+                    <button class="color-btn" data-color="#333333">Dark</button>
+                    <button class="color-btn" data-color="#e6f7ff">Blue</button>
+                    <button class="color-btn" data-color="#ffece6">Orange</button>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Ibrahim Rada</p>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript to change background color when buttons are clicked
+        document.querySelectorAll('.color-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                document.body.style.backgroundColor = this.getAttribute('data-color');
+            });
+        });
+    </script>
+</body>
+</html>
